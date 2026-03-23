@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-part2-V2"
+		},
+		"LK_adlspart2V2_accountKey": {
+			"value": ""
+		},
+		"LS_DS_mysql_password": {
+			"value": ""
+		},
+		"LK_adlspart2V2_properties_typeProperties_url": {
+			"value": "https://adlspart2v2.dfs.core.windows.net/"
+		},
+		"LS_DS_mysql_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"LS_DS_mysql_properties_typeProperties_database": {
+			"value": "sakila"
+		},
+		"LS_DS_mysql_properties_typeProperties_username": {
+			"value": "root"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
