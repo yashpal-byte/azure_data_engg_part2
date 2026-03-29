@@ -18,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('rl-sql-001',dataset().table_catalog)",
+					"type": "Expression"
+				},
 				"fileSystem": "blob"
 			},
 			"compressionCodec": "snappy"
