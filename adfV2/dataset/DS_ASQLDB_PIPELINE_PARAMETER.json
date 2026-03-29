@@ -1,0 +1,16 @@
+{
+	"name": "DS_ASQLDB_PIPELINE_PARAMETER",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LK_AzureSql_v2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "pipeline_parameter"
+		}
+	}
+}
