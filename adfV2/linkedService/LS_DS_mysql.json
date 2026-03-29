@@ -7,12 +7,12 @@
 		"typeProperties": {
 			"server": "localhost",
 			"port": 3306,
-			"database": "sakila",
+			"database": "adventureworks",
 			"username": "root",
 			"sslMode": 1,
 			"useSystemTrustStore": 0,
 			"driverVersion": "v2",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkMWU5MjA4My00YzYxLTQzNjUtYjUxZi03MGVlOTkwZDg2NzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5OGIzMmZhYS1mMzBkLTRmZWMtYTJkMi1lOTg2ZjUyNDc0OTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "SHIR",
