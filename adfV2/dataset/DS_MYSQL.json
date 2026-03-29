@@ -1,0 +1,12 @@
+{
+	"name": "DS_MYSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DS_mysql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "MySqlTable",
+		"schema": []
+	}
+}
