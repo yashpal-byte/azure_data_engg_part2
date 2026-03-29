@@ -1,6 +1,11 @@
 {
 	"name": "pipeline1",
 	"properties": {
+		"parameters": {
+			"Table_Name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
