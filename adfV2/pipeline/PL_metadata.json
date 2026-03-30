@@ -34,12 +34,17 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "MySqlSource"
+									"type": "MySqlSource",
+									"query": "USE @{item().Table_catalog}\r\nSELECT * FROM @{item().Table_Name}"
 								},
 								"sink": {
-									"type": "AzureSqlSink",
-									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
 								},
 								"enableStaging": false,
 								"translator": {
@@ -59,8 +64,18 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DS_ASQLDB_PIPELINE_PARAMETER",
-									"type": "DatasetReference"
+									"referenceName": "DS_ADLS2",
+									"type": "DatasetReference",
+									"parameters": {
+										"table_name": {
+											"value": "@{item().table_name}",
+											"type": "Expression"
+										},
+										"table_catalog": {
+											"value": "@{item().table_catalog}",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
