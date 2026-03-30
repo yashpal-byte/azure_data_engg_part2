@@ -41,12 +41,14 @@
 									}
 								},
 								"sink": {
-									"type": "ParquetSink",
+									"type": "DelimitedTextSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "ParquetWriteSettings"
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
 									}
 								},
 								"enableStaging": false,
@@ -67,18 +69,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DS_ADLS2",
-									"type": "DatasetReference",
-									"parameters": {
-										"table_name": {
-											"value": "@{item().table_name}",
-											"type": "Expression"
-										},
-										"table_catalog": {
-											"value": "@{item().table_catalog}",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "DS_ADLS_csv",
+									"type": "DatasetReference"
 								}
 							]
 						}
