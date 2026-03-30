@@ -50,6 +50,9 @@
 		"parameters": {
 			"Table_Name": {
 				"type": "string"
+			},
+			"Table_catalog": {
+				"type": "string"
 			}
 		},
 		"annotations": []
