@@ -17,7 +17,12 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('rl-sql-001',dataset().table_catalog)",
+					"type": "Expression"
+				},
+				"fileSystem": "blob"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
