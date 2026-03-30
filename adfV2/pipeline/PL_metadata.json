@@ -7,7 +7,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "LookupTables",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -88,7 +88,8 @@
 				}
 			},
 			{
-				"name": "Lookup1",
+				"name": "LookupTables",
+				"description": "Control table lookup",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
