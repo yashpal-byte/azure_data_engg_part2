@@ -23,7 +23,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat('rl-sql-001',dataset().table_catalog)",
+					"value": "rl-sql-001",
 					"type": "Expression"
 				},
 				"fileSystem": "blob"
