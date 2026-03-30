@@ -35,7 +35,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "MySqlSource",
-									"query": "USE @{item().Table_catalog}\r\nSELECT * FROM @{item().Table_Name}"
+									"query": {
+										"value": "SELECT * FROM @{item().Table_Name}",
+										"type": "Expression"
+									}
 								},
 								"sink": {
 									"type": "ParquetSink",
