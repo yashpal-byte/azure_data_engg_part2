@@ -75,10 +75,6 @@
 										"table_name": {
 											"value": "@item().table_name",
 											"type": "Expression"
-										},
-										"table_catalog": {
-											"value": "@item().table_catalog",
-											"type": "Expression"
 										}
 									}
 								}
