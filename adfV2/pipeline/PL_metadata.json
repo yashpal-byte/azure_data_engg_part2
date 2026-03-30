@@ -88,7 +88,8 @@
 					"dataset": {
 						"referenceName": "DS_ASQLDB_PIPELINE_PARAMETER",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
