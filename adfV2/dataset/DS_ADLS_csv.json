@@ -18,6 +18,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{dataset().table_name}/@{formatDateTime(utcNow(),'yyyy')}/@{formatDateTime(utcNow(),'MM')}/@{formatDateTime(utcNow(),'dd')}",
+					"type": "Expression"
+				},
 				"folderPath": {
 					"value": "@concat('rl-sql-001',dataset().table_catalog)",
 					"type": "Expression"
