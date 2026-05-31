@@ -19,6 +19,8 @@
 						"value": "@activity('LookupTables').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
+					"batchCount": 5,
 					"activities": [
 						{
 							"name": "CopySalesSchema",
@@ -26,8 +28,8 @@
 							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
+								"retry": 3,
+								"retryIntervalInSeconds": 60,
 								"secureOutput": false,
 								"secureInput": false
 							},
@@ -36,7 +38,7 @@
 								"source": {
 									"type": "MySqlSource",
 									"query": {
-										"value": "SELECT * FROM @{item().Table_Name}",
+										"value": "@concat('SELECT * FROM ', item().TABLE_NAME)",
 										"type": "Expression"
 									}
 								},
@@ -91,7 +93,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "MySqlSource",
-						"query": "USE adventureworks;\r\n\r\nSELECT * FROM INFORMATION_SCHEMA.TABLES\r\nWHERE TABLE_TYPE  = 'BASE TABLE' AND TABLE_SCHEMA = 'adventureworks' AND TABLE_NAME LIKE 'sales_%';"
+						"query": "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_SCHEMA = 'adventureworks' AND TABLE_NAME LIKE 'sales_%';"
 					},
 					"dataset": {
 						"referenceName": "DS_MYSQL",
