@@ -98,12 +98,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "MySqlSource",
+						"query": "USE adventureworks;\r\n\r\nSELECT * FROM INFORMATION_SCHEMA.TABLES\r\nWHERE TABLE_TYPE  = 'BASE TABLE' AND TABLE_SCHEMA = 'adventureworks' AND TABLE_NAME LIKE 'sales_%';"
 					},
 					"dataset": {
-						"referenceName": "DS_ASQLDB_PIPELINE_PARAMETER",
+						"referenceName": "DS_MYSQL",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
