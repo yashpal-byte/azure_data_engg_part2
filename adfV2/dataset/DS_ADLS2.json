@@ -19,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@{dataset().table_name}/@{formatDateTime(utcNow(),'yyyy')}/@{formatDateTime(utcNow(),'MM')}/@{formatDateTime(utcNow(),'dd')}",
+					"value": "@concat(dataset().table_name, '.parquet')",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat('rl-sql-001',dataset().table_catalog)",
+					"value": "@concat('adventureworks/',formatDateTime(utcNow(), 'yyyyMMdd'))",
 					"type": "Expression"
 				},
 				"fileSystem": "blob"
