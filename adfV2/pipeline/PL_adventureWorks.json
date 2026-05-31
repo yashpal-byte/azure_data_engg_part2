@@ -34,11 +34,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "MySqlSource",
-									"query": {
-										"value": "SELECT * FROM @{item().Table_Name}",
-										"type": "Expression"
-									}
+									"type": "MySqlSource"
 								},
 								"sink": {
 									"type": "DelimitedTextSink",
