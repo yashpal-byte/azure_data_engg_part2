@@ -21,7 +21,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "CopySalesSchema",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
